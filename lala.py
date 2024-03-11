@@ -1,6 +1,14 @@
-mesto = int(input("Введите номер маста "))
-s = "верхнее" if mesto // 2 % 2 == 0 else "нижнее"
-z = "боковое" if mesto // 4 % 2 == 0 else "купе"
-print(s)
-print(z)
+mesto = int(input("Введите номер места: "))
+if mesto < 1 or mesto > 55:
+    print("Неверный номер места. В плацкартном вагоне всего 54 места.")
+elif mesto <= 25:
+    if mesto % 2 == 0:
+        print("Это верхнее боковое место.")
+    else:
+        print("Это нижнее боковое место.")
+else:
+    if mesto % 2 == 0:
+        print("Это верхнее место в купе.")
+    else:
+        print("Это нижнее место в купе.")
 
